@@ -1,0 +1,14 @@
+{
+    "name": "shpartko/testcases",
+    "description": "Test cases for hr",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "dg/dibi": "^3.0",
+        "phroute/phroute": "^2.1"
+    }
+}
