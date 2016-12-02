@@ -1,15 +1,17 @@
-<IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews
-    </IfModule>
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /
 
-    RewriteEngine On
+# Add spash for end of url
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
 
-    # Redirect Trailing Slashes...
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*) /index.php [L]
 
-    # Handle Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
-</IfModule>
+Options All -Indexes
+DirectoryIndex index.php
+AddDefaultCharset UTF-8 
+DefaultLanguage ru
