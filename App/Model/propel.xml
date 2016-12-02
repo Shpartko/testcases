@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<config>
+    <propel>
+        <database>
+            <connections>
+                <connection id="forum">
+                    <adapter>mysql</adapter>
+                    <classname>Propel\Runtime\Connection\ConnectionWrapper</classname>
+                    <dsn>mysql:host=localhost;dbname=tmp_forum</dsn>
+                    <user>tmp_forum</user>
+                    <password>tmp_forum</password>
+                </connection>
+            </connections>
+        </database>
+        <runtime>
+            <defaultConnection>forum</defaultConnection>
+            <connection>forum</connection>
+        </runtime>
+        <generator>
+            <defaultConnection>forum</defaultConnection>
+            <connection>forum</connection>
+            <schema>
+              <autoPackage>true</autoPackage>
+            </schema>
+        </generator>
+    </propel>
+</config>

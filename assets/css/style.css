@@ -1,0 +1,319 @@
+.php_stat {
+    text-align: center;
+}
+
+.button {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    line-height:1em;
+    position:relative;
+    outline: none;
+    overflow: visible;
+    cursor: pointer;
+    border: 1px solid #999;
+    border: rgba(0, 0, 0, .2) 1px solid;
+    border-bottom:rgba(0, 0, 0, .4) 1px solid;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-user-select: none;
+    -webkit-user-select:none;
+    -khtml-user-select: none;
+    user-select: none;
+    margin-bottom:10px;
+}
+.button:hover {
+    background: -moz-linear-gradient(
+        center top,
+        rgba(255, 255, 255, .2) 0%,
+        rgba(255, 255, 255, .1) 100%
+        );
+    background: -webkit-gradient(
+        linear,
+        center bottom,
+        center top,
+        from(rgba(255, 255, 255, .1)),
+        to(rgba(255, 255, 255, .2))
+    );
+}
+.button:active, .button.active {
+    top:1px;
+}
+.button.silver {
+    background-color: #eee;
+    color: #666;
+}
+.button.red {
+    background-color: #e62727;
+    color: #fff;
+}
+.button.red2 {
+    background-color: #ff4d4c;
+    color: #fff;
+}
+.button.blue {
+    background-color: #00ADEE;
+    color: #fff;
+}
+
+html, body {font: 14px/18px Arial; }
+h1 {font-size: 25px; line-height: 30px;}
+
+.delimiter {
+    height: 1px;
+    border-bottom: 1px solid #DEDEDE;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.error404 {
+    background-color: #ff4d4c;
+    color: #fff; 
+    padding: 20px;
+    margin: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.page { 
+    min-width: 960px; 
+    max-width:1200px; 
+    margin: 0px auto; 
+}
+.title { 
+    padding: 30px 20px;
+    width: auto;
+    word-wrap: break-word; 
+    overflow: hidden;
+}
+.title .new_button {
+    float: right;
+    margin-left: 50px;
+}
+.title .topic_body {
+    margin-top: 25px;
+    word-wrap: break-word; 
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.title .creator {
+color: #999;
+    border-top: 1px solid #eee;
+    padding-top: 5px;
+    float: right;
+}
+
+
+.nav_pages {
+    border-top: 3px double #eee;
+    text-align: center;
+    padding: 20px 10px;
+    margin: 10px 0px;
+}
+
+.nav_pages a { 
+    text-decoration: none; 
+    background: #eee;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;    
+    padding: 5px 10px;
+    color: #666;
+    font-size: 16px;
+}
+
+.nav_pages a:hover { 
+    background: bisque;
+}
+.nav_pages .selected { 
+    background: red;
+    color:#fff;
+}
+.nav_pages p {
+    margin-top: 15px; 
+}
+.topiclist, .posts {
+  width: 100%;  
+}
+
+.topiclist .title {
+    background: #eee !important;
+    font-weight: bold;
+}
+
+.topiclist .even, .posts .even {
+    background-color: #EEEEEE;
+} 
+
+
+.topiclist .odd, .posts .odd {
+    background-color: #FFFFFF;
+}   
+
+.topiclist td {
+    padding: 10px;
+    vertical-align:middle;
+}
+.posts td {
+    padding: 10px 20px;
+    vertical-align:middle;
+    
+}
+
+
+.topiclist .col1 { 
+    width: 25px;
+    background: url(/images/next2.png) 13px 19px no-repeat;
+}
+.topiclist tr:hover .col1 { 
+    background: url(/images/next.png) 10px 13px no-repeat;
+}
+.topiclist .col2 {
+
+}
+
+.topiclist .col3, .topiclist .col4 { width: 90px; overflow: hidden; text-align: center;}
+.topiclist .col5 { width: 180px;}
+.topiclist .center {text-align: center;}
+
+.topiclist tr:hover{
+    background: bisque;
+}
+.posts tr:hover{
+    background: cornsilk;
+}
+
+.topiclist .pages { 
+    color: #999; 
+    margin-top: 5px;
+    font-size: 12px;
+}
+.topiclist .pages  a { 
+    text-decoration: none; 
+    background: orange;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;    
+    padding: 1px 5px;
+    color: #fff;
+    font-size: 11px;
+}
+.topiclist .pages  a:hover { 
+    background: blue;
+}
+
+.posts .post_date {
+    text-decoration: none; 
+    background: #eee;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;    
+    padding: 5px 5px;
+    color: #666;
+    font-size: 11px;
+    text-align: right;
+    
+}
+.posts .post_key {
+    font-size: 20px;
+float: left;
+padding: 12px 15px;
+border: 1px solid #eee;
+margin: 0px 10px;
+}
+.no_posts {
+    background-color: #eee;
+    color: blue; 
+    padding: 20px;
+    margin: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.new_topic, .new_post {
+    background-color: #CCC;
+    padding: 20px;
+    margin-bottom: 1px;
+    display: none;
+}
+
+.new_topic input[type="text"], .new_post input[type="text"] {
+    width:100%; 
+    height:20px; 
+    padding: 5px 0px; 
+    border: solid 1px #E5E5E5; 
+}
+
+.new_topic textarea, .new_post textarea { 
+    width:100%; 
+    height:105px; 
+    padding: 5px 0px;  
+    border: solid 1px #E5E5E5;
+}
+.new_topic label, .new_post label {
+    line-height: 35px;
+}
+.new_topic .buttons, .new_post .buttons {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.search {
+    float: right;
+    width: 310px;
+    
+}
+.search input[type="text"] {
+    width:70%; 
+    height:20px; 
+    padding: 4px 5px; 
+    border: solid 1px #E5E5E5; 
+}
+.search input[type="submit"] {
+    float: right;
+}
+
+#ajax_process {
+   background: url(/images/preloader.gif) no-repeat; 
+   width: 160px;
+   height: 24px;
+   float: left;
+   margin-top: 20px;
+   display: none;
+}
+
+.search2 {
+    padding: 10px 30px 30px 30px;
+    background: #eee;
+    border-bottom: 3px double #999;
+}
+.search2 p {
+    text-align: center;
+    padding: 20px;
+}
+.search2 input[type="text"] {
+    width:89%; 
+    height:20px; 
+    padding: 4px 0px; 
+    border: solid 1px #E5E5E5; 
+    margin-right: 25px;
+    display: block;
+}
+
+.search2 input[type="submit"] {
+    position:relative;
+    float: right;
+    margin-top: -28px;
+    width: 10%;
+    
+}

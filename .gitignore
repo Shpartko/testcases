@@ -1,6 +1,8 @@
 /vendor
 /node_modules
 /.vscode
+/View/cache
+/View/compiled
 .DS_Store
 Thumbs.db
 composer.phar

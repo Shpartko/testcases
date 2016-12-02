@@ -4,11 +4,17 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
-        }
+            "App\\": "App/",
+	    "App\\Model\\": ["App/Model/generated-classes/App/Model"]
+        },
+	"files": ["App/Model/generated-conf/config.php"]
     },
     "require": {
-        "dg/dibi": "^3.0",
-        "phroute/phroute": "^2.1"
+        "phroute/phroute": "^2.1",
+	"propel/propel": "~2.0@dev",
+        "smarty/smarty": "^3.1",
+        "fzaninotto/faker": "^1.6",
+        "maximebf/debugbar": "^1.13",
+	"respect/validation": "^1.1.10"
     }
 }
