@@ -14,13 +14,18 @@ class PostController
             $result->message='Текст должен быть от 5 до 1024 символов';
             return \App\Design::json($result);
         }
-        $topic = \App\Model\TopicQuery::create()->findPK($_POST['topic_id']);
-        if (!$topic) {
-            $result->message="Тема с ID {$_POST['topic_id']} на форуме не найдена";
+        if (!v::intVal()->validate($_POST['topic_id'])) {
+            $result->message='Некорректный топик';
             return \App\Design::json($result);
         }
 
         try {
+            $topic = \App\Model\TopicQuery::create()->findPK($_POST['topic_id']);
+            if (!$topic) {
+                $result->message="Тема с ID {$_POST['topic_id']} на форуме не найдена";
+                return \App\Design::json($result);
+            }
+
             $post = new \App\Model\Post();
             $post->setText($_POST['text']);
             $post->setUsername($_SERVER['REMOTE_ADDR']);

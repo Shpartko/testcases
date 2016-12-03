@@ -38,7 +38,7 @@ class TopicController
         $topic->save();
 
         \App\Design::assign('topic', $topic);
-        \App\Design::assign('meta_title', $topic->getTitle());
+        \App\Design::assign('meta_title', substr($topic->getTitle(), 0, 25).'...');
         return \App\Design::fetch('topic.tpl');
     }
 
@@ -52,7 +52,7 @@ class TopicController
             $result->message='Заголовок должен быть от 5 до 256 символов';
             return \App\Design::json($result);
         }
-        if (!v::stringType()->length(5, 1024)->validate($_POST['text'])) {
+        if (!v::stringType()->length(5, 1024)->validate($_POST['body'])) {
             $result->message='Текст должен быть от 5 до 1024 символов';
             return \App\Design::json($result);
         }
@@ -60,7 +60,7 @@ class TopicController
         try {
             $topic = new \App\Model\Topic();
             $topic->setTitle($_POST['title']);
-            $topic->setBody($_POST['text']);
+            $topic->setBody($_POST['body']);
             $topic->setUsername($_SERVER['REMOTE_ADDR']);
             $topic->setViews(0);
             $topic->save();
